@@ -162,5 +162,5 @@ Funcion band <- verificarVacia(pila,tope)
         band <- Falso; 
     FinSi
 FinFuncion
-
+.
 """
