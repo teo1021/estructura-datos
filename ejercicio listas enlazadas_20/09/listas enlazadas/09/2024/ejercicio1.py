@@ -3,7 +3,7 @@ class Animal:
         self.nombre = nombre
         self.tipo = tipo
         self.edad = edad
-        self.siguiente = None  # Para la lista enlazada
+        self.siguiente = None  
 
     def __str__(self):
         return f"Nombre: {self.nombre}, Tipo: {self.tipo}, Edad: {self.edad} años"
@@ -19,7 +19,7 @@ class ListaEnlazadaAnimales:
         else:
             actual = self.cabeza
             while actual.siguiente:
-                if actual.nombre == nuevo_animal.nombre:  # Verifica que no se repita
+                if actual.nombre == nuevo_animal.nombre: 
                     print(f"El animal {nuevo_animal.nombre} ya está en la lista.")
                     return
                 actual = actual.siguiente
@@ -29,7 +29,7 @@ class ListaEnlazadaAnimales:
             actual.siguiente = nuevo_animal
         print(f"Animal {nuevo_animal.nombre} agregado con éxito.")
 
-    # Función para mostrar los animales en bucle
+    
     def mostrar_en_bucle(self):
         actual = self.cabeza
         if actual is None:
@@ -39,7 +39,7 @@ class ListaEnlazadaAnimales:
             print(actual)
             actual = actual.siguiente
 
-    # Función recursiva para mostrar los animales
+  
     def mostrar_en_recursion(self, nodo=None):
         if nodo is None:
             nodo = self.cabeza
@@ -51,7 +51,6 @@ class ListaEnlazadaAnimales:
             self.mostrar_en_recursion(nodo.siguiente)
 
 
-# Función para agregar animales de manera interactiva
 def menu_interactivo():
     lista_animales = ListaEnlazadaAnimales()
 
