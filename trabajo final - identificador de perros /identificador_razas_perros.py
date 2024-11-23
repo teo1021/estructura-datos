@@ -37,8 +37,7 @@ class ListaEnlazada:
 model = MobileNetV2(weights='imagenet')
 
 
-img_path = '/content/descarga (2).jpg'  # Asegúrate de subir tu imagen y cambiar el nombre aquí
-
+img_path = '/content/descarga (2).jpg'  
 
 img = image.load_img(img_path, target_size=(224, 224))
 img_array = image.img_to_array(img)
